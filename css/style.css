@@ -34,6 +34,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: .5rem 0;
+}
+
 ul {
   list-style: none;
 }
@@ -151,7 +155,8 @@ h6 {
 .bg-secondary h2,
 .bg-secondary h3,
 .bg-secondary a,
-.bg-secondary p {
+.bg-secondary p,
+#main-footer .container .join-club a {
   color: #000;
 }
 
@@ -179,6 +184,27 @@ h6 {
   padding: 3rem;
 }
 
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #555 dotted 1px;
+  width: 90%;
+}
+
+/* Inner page grid container */
+/* Nota: Usado en about.html */
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+/* Nota: Usado en about.html expande primer elemento grid
+      3 rows. Para alienar en la parte superior, el segundo
+      elemento (JOIN OUR CLUB)*/
+.page-container>*:first-child {
+  grid-row: 1/3;
+}
 
 
 /* ************************ */
@@ -314,3 +340,53 @@ h6 {
 }
 
 /* >>>>>>>> Termina Estilo al primer y último elemento del grid <<<<<<<<<  */
+
+
+
+/* *****************  */
+/* Inicia footer */
+#main-footer {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+#main-footer img {
+  width: 150px;
+}
+
+#main-footer a {
+  color: #fff;
+}
+
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+#main-footer .footer-container>*:last-child {
+  grid-column: 1/5;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #444;
+  font-size: 0.8rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+  width: 90%;
+}
+
+#main-footer .footer-container div .list li a:hover {
+  color: var(--secondary-color);
+}
+
+/* Termina footer */
+
+/* ********************  */
+/* Inicia about.html */
