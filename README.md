@@ -10,6 +10,12 @@
 + http://www.instagram.com/traversymedia
 
 ### Lessons Learned
-     - 
+     - Links que se utilizarán como btn se usan como:
+		
+		display: inline-block
+		border: none
+     - Para no agregar tonos de colores en :hover, usar:
+
+		opacity:0.9;
 
 _Febrero 2021 Omar Rosas_
