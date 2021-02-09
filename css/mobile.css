@@ -1,0 +1,131 @@
+/* Notas:
+
+  En main-nav
+  1.- No mostrar los íconos de social media. Con 
+      display: none;
+  
+  2.- Logo y menu apilados.
+
+  3.- En #home-articles se quita el span al primer y último artículo
+
+  4.- Se muestra grid en 2 columnas
+  
+  5.- Se agrega @media para celulares
+  
+  6.- En media, se elimina grid span del Copyright
+
+  7.- Se añade border-bottom a todos los elementos de footer
+
+  8.- En about.html se apilan en .page-container y se
+  elimina span
+
+  9.- Disminuir l-heading para media de 600px
+  
+  */
+
+
+
+/* Navigation */
+#main-nav .container .social {
+  display: none;
+}
+
+#main-nav .container {
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+#main-nav ul,
+#main-nav .logo {
+  justify-self: center;
+}
+
+#main-nav .container ul li a {
+  padding: 0.5rem;
+}
+
+/* Nota: Omar REHACER no se ve completo.
+Solución: Expandir a 1fr */
+/* #showcase .container .showcase-container {
+  height: 55vh;
+} */
+/* 
+#showcase .container .showcase-container {
+  grid-template-columns: 1fr;
+  height: 55vh;
+} */
+
+#home-articles .container .articles-container>*:first-child,
+#home-articles .container .articles-container>*:last-child {
+  grid-template-columns: 1fr;
+  grid-column: 1;
+}
+
+#home-articles .container .articles-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+
+@media(max-width: 600px) {
+  /* Stack Grid Items */
+
+  /* Nota: Con css por default no se ve botón */
+  #showcase .container .showcase-container {
+    height: 55vh;
+  }
+
+  #showcase .container .showcase-container,
+  #home-articles .container .articles-container,
+  #main-footer .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  #main-footer .footer-container>*:last-child {
+    grid-column: 1;
+  }
+
+}
+
+#main-footer .footer-container>*:first-child,
+#main-footer .footer-container>*:nth-child(2) {
+  border-bottom: var(--secondary-color) 1px dotted;
+  padding-bottom: 1rem;
+}
+
+/* about.html */
+
+.page-container {
+  grid-template-columns: 1fr;
+  text-align: justify;
+}
+
+.page-container>*:first-child {
+  grid-row: 1;
+}
+
+#article .meta {
+  flex-direction: column;
+}
+
+.l-heading {
+  font-size: 2.2rem;
+}
+
+@media(max-height: 450px) {
+  #showcase .container .showcase-container {
+    height: 80vh;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Staatliches', cursive;
+  margin-bottom: .55rem;
+  line-height: 1.3;
+}
